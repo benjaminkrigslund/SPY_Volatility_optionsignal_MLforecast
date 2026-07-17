@@ -1,0 +1,136 @@
+# Clean modular forecasting framework for next-month S&P 500 realized volatility.
+# Update 00_config.R so the column names and master dataset path match your thesis data.
+
+source(file.path("R", "functions", "framework", "00_config.R"))
+source(file.path("R", "functions", "framework", "UTILS", "helpers.R"))
+source(file.path("R", "functions", "framework", "DATA", "build_master_dataset.R"))
+source(file.path("R", "functions", "framework", "01_load_data.R"))
+source(file.path("R", "functions", "framework", "FEATURES", "feature_sets.R"))
+source(file.path("R", "functions", "framework", "MODELS", "model_har.R"))
+source(file.path("R", "functions", "framework", "MODELS", "model_enet.R"))
+source(file.path("R", "functions", "framework", "MODELS", "model_pca.R"))
+source(file.path("R", "functions", "framework", "MODELS", "model_pls.R"))
+source(file.path("R", "functions", "framework", "MODELS", "model_rf.R"))
+source(file.path("R", "functions", "framework", "MODELS", "model_nn.R"))
+source(file.path("R", "functions", "framework", "MODELS", "model_registry.R"))
+source(file.path("R", "functions", "framework", "FORECASTS", "run_forecast.R"))
+source(file.path("R", "functions", "framework", "FORECASTS", "combine_forecasts.R"))
+source(file.path("R", "functions", "framework", "EVALUATION", "dm_test.R"))
+source(file.path("R", "functions", "framework", "EVALUATION", "encompassing_test.R"))
+source(file.path("R", "functions", "framework", "EVALUATION", "evaluate_forecasts.R"))
+source(file.path("R", "functions", "framework", "EVALUATION", "economic_value.R"))
+source(file.path("R", "functions", "framework", "RESULTS", "save_results.R"))
+
+required_packages <- c("data.table", "dplyr", "tidyr", "lubridate", "glmnet", "pls", "ranger", "nnet")
+missing_packages <- required_packages[!vapply(required_packages, requireNamespace, logical(1), quietly = TRUE)]
+
+if (length(missing_packages) > 0L) {
+  stop(
+    "Install required packages before running the framework: ",
+    paste(missing_packages, collapse = ", ")
+  )
+}
+
+config <- create_config(base_dir = getwd())
+
+ensure_dir(config$paths$results_dir)
+ensure_dir(config$paths$framework_data_dir)
+
+if (!file.exists(config$paths$master_data)) {
+  message("Master dataset not found. Building it from the raw project data...")
+  build_master_dataset(
+    data_path = config$paths$data_dir,
+    output_path = config$paths$master_data,
+    framework_copy_path = file.path(config$paths$framework_data_dir, "master_dataset.csv"),
+    feature_dictionary_path = file.path(config$paths$framework_data_dir, "master_feature_dictionary.csv"),
+    start_date = as.Date("1972-01-31"),
+    save_outputs = TRUE
+  )
+}
+
+master_data <- load_master_data(config)
+
+# Benchmark HAR only, non-benchmark models always include HAR variables.
+spec_grid <- data.table::rbindlist(list(
+  data.table::CJ(
+    model_type = "har_ols",
+    feature_set = "HAR",
+    window_type = config$forecasting$window_types,
+    target_type = config$forecasting$target_types,
+    sorted = FALSE
+  ),
+  data.table::CJ(
+    model_type = c("enet", "pca", "pls", "rf", "nn"),
+    feature_set = c("HAR", "HAR_O", "HAR_M", "HAR_OM"),
+    window_type = config$forecasting$window_types,
+    target_type = config$forecasting$target_types,
+    sorted = FALSE
+  )
+), fill = TRUE)
+
+forecast_runs <- vector("list", nrow(spec_grid))
+
+for (i in seq_len(nrow(spec_grid))) {
+  spec <- spec_grid[i]
+  message(
+    "[", i, "/", nrow(spec_grid), "] Running ",
+    spec$model_type, " | ", spec$feature_set, " | ",
+    spec$target_type, " | ", spec$window_type
+  )
+
+  forecast_runs[[i]] <- run_forecast(
+    data = master_data,
+    model_type = spec$model_type,
+    feature_set = spec$feature_set,
+    window_type = spec$window_type,
+    initial_window = config$forecasting$initial_window,
+    refit_every = config$forecasting$refit_every,
+    target_type = spec$target_type,
+    config = config
+  )
+}
+
+all_forecasts <- data.table::rbindlist(lapply(forecast_runs, `[[`, "forecasts"), fill = TRUE)
+all_forecasts <- clean_forecast_table(all_forecasts)
+all_importance <- data.table::rbindlist(lapply(forecast_runs, `[[`, "importance"), fill = TRUE)
+
+evaluation <- evaluate_forecasts(forecast_df = all_forecasts, config = config)
+
+# Example equal-weight combination across all non-benchmark models within each window/target setting.
+combo_input <- all_forecasts[model_type != "har_ols"]
+combination_forecasts <- combine_forecasts(
+  forecast_df = combo_input,
+  method = "equal_weight",
+  combination_name = "combo_equal_weight_all_ml"
+)
+combination_evaluation <- evaluate_forecasts(forecast_df = combination_forecasts, config = config)
+
+backward_combination <- run_backward_combination_selection(
+  forecast_df = combo_input,
+  config = config,
+  criterion = "oos_r2",
+  min_members = 1L,
+  combination_name = "combo_backward_subset_equal_weight"
+)
+
+forward_combination <- run_forward_combination_selection(
+  forecast_df = combo_input,
+  config = config,
+  criterion = "oos_r2",
+  combination_name = "combo_forward_subset_equal_weight"
+)
+
+save_results(all_forecasts, "all_forecasts", config)
+save_results(all_importance, "all_variable_importance", config)
+save_results(evaluation$summary, "forecast_evaluation_summary", config)
+save_results(evaluation$losses, "forecast_loss_series", config)
+save_results(combination_forecasts, "forecast_combinations", config)
+save_results(combination_evaluation$summary, "forecast_combinations_evaluation", config)
+save_results(backward_combination$forecasts, "forecast_combinations_backward_subset", config)
+save_results(backward_combination$selection_path, "forecast_combinations_backward_subset_path", config)
+save_results(backward_combination$evaluation, "forecast_combinations_backward_subset_evaluation", config)
+save_results(forward_combination$forecasts, "forecast_combinations_forward_subset", config)
+save_results(forward_combination$selection_path, "forecast_combinations_forward_subset_path", config)
+save_results(forward_combination$evaluation, "forecast_combinations_forward_subset_evaluation", config)
+
+message("Framework run complete. Results saved in data/processed/model_artifacts.")
