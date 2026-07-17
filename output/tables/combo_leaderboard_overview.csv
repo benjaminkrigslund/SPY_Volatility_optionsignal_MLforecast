@@ -1,0 +1,48 @@
+combo_name,forecast_id,combo_type,n_eval,oos_r2,qlike,qlike_gain_vs_har,n_members,source_file,rank_oos_r2,rank_qlike
+combo_meta_enet_ml_x_dataset_log_rolling,combo_meta_enet_ml_x_dataset_log_rolling,Meta Combination,206,0.571775152547767,0.263093781269802,0.0776583474378476,20,combo_meta_ml_x_dataset_log_rolling_vs_har.csv,1,1
+combo_meta_rf_ml_x_dataset_log_rolling,combo_meta_rf_ml_x_dataset_log_rolling,Meta Combination,206,0.516367457052523,0.304889512247806,0.0358626164598443,20,combo_meta_ml_x_dataset_log_rolling_vs_har.csv,2,10
+Equal weight ML: HAR + options + macro,combo_equal_weight_ml_h_o_m_log_rolling,Equal Weight: ML Universe Blocks,211,0.475749848110446,0.297651976190353,,,combo_equal_weight_ml_h_o_m_log_rolling_evaluation.csv,3,8
+Equal weight ML: options + macro,combo_equal_weight_ml_o_m_log_rolling,Equal Weight: ML Universe Blocks,211,0.436088742072627,0.310243410947455,,,combo_equal_weight_ml_h_o_m_log_rolling_evaluation.csv,4,11
+Equal weight PLS: HAR + options + macro,combo_equal_weight_pls_h_o_m_log_rolling,Equal Weight: Within Family,206,0.430961117043752,0.295566034191115,,,family_combo_equal_weight_h_o_m_log_rolling_evaluation.csv,5,7
+Equal weight all ML families: HAR + options + macro,combo_equal_weight_all_ml_h_o_m_log_rolling,Equal Weight: Family Winners,242,0.417618206909388,0.327643972059777,,,combo_of_family_winners_log_rolling_evaluation.csv,6,17
+Equal weight of family winners,combo_equal_weight_family_winners_log_rolling,Equal Weight: Family Winners,242,0.412631339271042,0.357042933023423,,,combo_of_family_winners_log_rolling_evaluation.csv,7,23
+Equal weight ML: HAR + options,combo_equal_weight_ml_h_o_log_rolling,Equal Weight: ML Universe Blocks,211,0.400266445078207,0.282669926399122,,,combo_equal_weight_ml_h_o_m_log_rolling_evaluation.csv,8,4
+Equal weight ML: HAR,combo_equal_weight_ml_h_log_rolling,Equal Weight: ML Universe Blocks,211,0.391918707391487,0.341992092814873,,,combo_equal_weight_ml_h_o_m_log_rolling_evaluation.csv,9,20
+Family winner: PLS HAR + options + macro,combo_equal_weight_pls_h_o_m_log_rolling,Equal Weight: Family Winners,242,0.364886694925118,0.365861108730194,,,combo_of_family_winners_log_rolling_evaluation.csv,10,25
+Equal weight ML: HAR + macro,combo_equal_weight_ml_h_m_log_rolling,Equal Weight: ML Universe Blocks,211,0.356620667577155,0.397877931458733,,,combo_equal_weight_ml_h_o_m_log_rolling_evaluation.csv,11,29
+Equal weight PCA: HAR,combo_equal_weight_pca_h_log_rolling,Equal Weight: Within Family,206,0.355382327852069,0.396108633832874,,,family_combo_equal_weight_h_o_m_log_rolling_evaluation.csv,12,28
+Equal weight: HAR + options,combo_rf_log_rolling_har_o,Equal Weight: RF Only,191,0.351715590161053,0.3469487823136,,,rf_log_rolling_har_o_m_evaluation.csv,13,21
+Equal weight: HAR + options + macro,combo_rf_log_rolling_har_o_m,Equal Weight: RF Only,191,0.348398026699703,0.367369051566001,,,rf_log_rolling_har_o_m_evaluation.csv,14,26
+Equal weight ENET: HAR + options + macro,combo_equal_weight_enet_h_o_m_log_rolling,Equal Weight: Within Family,211,0.334227858815055,0.303886444314278,,,family_combo_equal_weight_h_o_m_log_rolling_evaluation.csv,15,9
+Equal weight: HAR + macro,combo_rf_log_rolling_har_m,Equal Weight: RF Only,191,0.334096813875531,0.428481524217269,,,rf_log_rolling_har_o_m_evaluation.csv,16,30
+Family winner: ENET HAR + options + macro,combo_equal_weight_enet_h_o_m_log_rolling,Equal Weight: Family Winners,242,0.319796388281509,0.332723216821945,,,combo_of_family_winners_log_rolling_evaluation.csv,17,18
+Equal weight PCA: HAR + macro,combo_equal_weight_pca_h_m_log_rolling,Equal Weight: Within Family,206,0.304383113388367,0.460462217945794,,,family_combo_equal_weight_h_o_m_log_rolling_evaluation.csv,18,36
+Family winner: PCA HAR + macro,combo_equal_weight_pca_h_m_log_rolling,Equal Weight: Family Winners,242,0.301991200306801,0.440989773987657,,,combo_of_family_winners_log_rolling_evaluation.csv,19,33
+Equal weight: options + macro,combo_rf_log_rolling_o_m,Equal Weight: RF Only,191,0.301731189219875,0.395122203181226,,,rf_log_rolling_har_o_m_evaluation.csv,20,27
+Equal weight PCA: HAR + options + macro,combo_equal_weight_pca_h_o_m_log_rolling,Equal Weight: Within Family,206,0.287270389910296,0.310509929893869,,,family_combo_equal_weight_h_o_m_log_rolling_evaluation.csv,21,12
+Equal weight ENET: options + macro,combo_equal_weight_enet_o_m_log_rolling,Equal Weight: Within Family,211,0.267437451901368,0.319049082980769,,,family_combo_equal_weight_h_o_m_log_rolling_evaluation.csv,22,14
+Equal weight ENET: HAR + macro,combo_equal_weight_enet_h_m_log_rolling,Equal Weight: Within Family,211,0.264235124292442,0.432244708103114,,,family_combo_equal_weight_h_o_m_log_rolling_evaluation.csv,23,31
+Equal weight PLS: HAR + macro,combo_equal_weight_pls_h_m_log_rolling,Equal Weight: Within Family,206,0.26356287342419,0.437547370311237,,,family_combo_equal_weight_h_o_m_log_rolling_evaluation.csv,24,32
+Equal weight PLS: options + macro,combo_equal_weight_pls_o_m_log_rolling,Equal Weight: Within Family,206,0.210170678659336,0.340336369765319,,,family_combo_equal_weight_h_o_m_log_rolling_evaluation.csv,25,19
+Equal weight NN: HAR + options + macro,combo_equal_weight_nn_h_o_m_log_rolling,Equal Weight: Within Family,191,0.167092479910513,0.451249866442453,,,family_combo_equal_weight_h_o_m_log_rolling_evaluation.csv,26,35
+Equal weight PLS: HAR + options,combo_equal_weight_pls_h_o_log_rolling,Equal Weight: Within Family,206,0.138137944678273,0.287013155741435,,,family_combo_equal_weight_h_o_m_log_rolling_evaluation.csv,27,6
+Equal weight PLS: HAR,combo_equal_weight_pls_h_log_rolling,Equal Weight: Within Family,206,0.128207037573381,0.354767387768456,,,family_combo_equal_weight_h_o_m_log_rolling_evaluation.csv,28,22
+Equal weight ML: macro-only,combo_equal_weight_ml_m_log_rolling,Equal Weight: ML Universe Blocks,211,0.120560912895268,0.621892650923457,,,combo_equal_weight_ml_h_o_m_log_rolling_evaluation.csv,29,41
+Equal weight ENET: HAR,combo_equal_weight_enet_h_log_rolling,Equal Weight: Within Family,211,0.0831082727302952,0.357933725467733,,,family_combo_equal_weight_h_o_m_log_rolling_evaluation.csv,30,24
+Equal weight ENET: HAR + options,combo_equal_weight_enet_h_o_log_rolling,Equal Weight: Within Family,211,0.0625317934913193,0.274030075053835,,,family_combo_equal_weight_h_o_m_log_rolling_evaluation.csv,31,2
+Equal weight ENET: macro-only,combo_equal_weight_enet_m_log_rolling,Equal Weight: Within Family,211,0.0585465193287209,0.680800939761003,,,family_combo_equal_weight_h_o_m_log_rolling_evaluation.csv,32,42
+Equal weight PCA: options + macro,combo_equal_weight_pca_o_m_log_rolling,Equal Weight: Within Family,206,0.0479921073985068,0.322248810972647,,,family_combo_equal_weight_h_o_m_log_rolling_evaluation.csv,33,15
+Family winner: NN HAR + options + macro,combo_equal_weight_nn_h_o_m_log_rolling,Equal Weight: Family Winners,242,0.0375174893431302,0.522014956832639,,,combo_of_family_winners_log_rolling_evaluation.csv,34,38
+Equal weight NN: HAR + options,combo_equal_weight_nn_h_o_log_rolling,Equal Weight: Within Family,191,0.0264922018294733,0.446876605485752,,,family_combo_equal_weight_h_o_m_log_rolling_evaluation.csv,35,34
+Equal weight PCA: macro-only,combo_equal_weight_pca_m_log_rolling,Equal Weight: Within Family,206,0.0137733639148716,0.71212585529891,,,family_combo_equal_weight_h_o_m_log_rolling_evaluation.csv,36,43
+Equal weight NN: HAR + macro,combo_equal_weight_nn_h_m_log_rolling,Equal Weight: Within Family,191,0.00169787658074738,0.597208108689649,,,family_combo_equal_weight_h_o_m_log_rolling_evaluation.csv,37,40
+Equal weight PLS: macro-only,combo_equal_weight_pls_m_log_rolling,Equal Weight: Within Family,206,-0.0112609855498933,0.790298488526094,,,family_combo_equal_weight_h_o_m_log_rolling_evaluation.csv,38,44
+Equal weight ML: options-only,combo_equal_weight_ml_o_log_rolling,Equal Weight: ML Universe Blocks,211,-0.0199589682779524,0.326808250335638,,,combo_equal_weight_ml_h_o_m_log_rolling_evaluation.csv,39,16
+Equal weight PCA: HAR + options,combo_equal_weight_pca_h_o_log_rolling,Equal Weight: Within Family,206,-0.137205560250463,0.277571036850823,,,family_combo_equal_weight_h_o_m_log_rolling_evaluation.csv,40,3
+Equal weight NN: options + macro,combo_equal_weight_nn_o_m_log_rolling,Equal Weight: Within Family,191,-0.140216565296718,0.84630150855907,,,family_combo_equal_weight_h_o_m_log_rolling_evaluation.csv,41,45
+Equal weight NN: macro-only,combo_equal_weight_nn_m_log_rolling,Equal Weight: Within Family,191,-0.513803673428759,1.99791356464585,,,family_combo_equal_weight_h_o_m_log_rolling_evaluation.csv,42,47
+Equal weight NN: HAR,combo_equal_weight_nn_h_log_rolling,Equal Weight: Within Family,191,-0.590470520321136,0.546410450971426,,,family_combo_equal_weight_h_o_m_log_rolling_evaluation.csv,43,39
+Equal weight ENET: options-only,combo_equal_weight_enet_o_log_rolling,Equal Weight: Within Family,211,-0.772888042653996,0.319016955977568,,,family_combo_equal_weight_h_o_m_log_rolling_evaluation.csv,44,13
+Equal weight NN: options-only,combo_equal_weight_nn_o_log_rolling,Equal Weight: Within Family,191,-0.847664072990706,1.94872711236267,,,family_combo_equal_weight_h_o_m_log_rolling_evaluation.csv,45,46
+Equal weight PLS: options-only,combo_equal_weight_pls_o_log_rolling,Equal Weight: Within Family,206,-1.54811011837006,0.500452994365841,,,family_combo_equal_weight_h_o_m_log_rolling_evaluation.csv,46,37
+Equal weight PCA: options-only,combo_equal_weight_pca_o_log_rolling,Equal Weight: Within Family,206,-2.09391055881396,0.283597763366773,,,family_combo_equal_weight_h_o_m_log_rolling_evaluation.csv,47,5

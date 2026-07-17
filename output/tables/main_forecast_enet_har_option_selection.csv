@@ -1,0 +1,24 @@
+variable,variable_label,feature_group,selected_refits,selection_rate,mean_abs_coefficient,median_abs_coefficient,latest_abs_coefficient
+har_rv_1m,realized_vol,har,237,1,0.19059,0.18944,0.25309
+har_rv_3m,3-month mean of realized_vol,har,237,1,0.11723,0.09296,0.01979
+har_rv_12m,12-month mean of realized_vol,har,237,1,0.05693,0.02913,0.00817
+call_25_iv_eom,call_25_iv_eom,option,205,0.86498,0.12917,0.12546,0.1652
+atm_iv_eom,atm_iv_eom,option,203,0.85654,0.10827,0.09894,0.04146
+put_25_dispersion_eom,put_25_dispersion_eom,option,187,0.78903,0.10118,0.08954,0.00912
+implied_var_month_avg,implied_var_month_avg,option,185,0.78059,0.18085,0.19254,0.15848
+mean_dispersion_eom,mean_dispersion_eom,option,177,0.74684,0.0325,0.02746,0.03458
+smile_curvature_25_month_avg,smile_curvature_25_month_avg,option,174,0.73418,0.05113,0.05011,0.00252
+put_25_iv_eom,put_25_iv_eom,option,169,0.71308,0.05542,0.04513,0.03351
+atm_dispersion_eom,atm_dispersion_eom,option,161,0.67932,0.10111,0.09047,0.01958
+smile_curvature_25_eom,smile_curvature_25_eom,option,161,0.67932,0.06587,0.06243,0.00363
+vrp_forward_eom,vrp_forward_eom,option,148,0.62447,0.0533,0.03747,0.10002
+mean_dispersion_month_avg,mean_dispersion_month_avg,option,141,0.59494,0.04517,0.04741,0.01217
+skew_25_month_avg,skew_25_month_avg,option,113,0.47679,0.07638,0.06469,0.06407
+smile_curvature_10_eom,smile_curvature_10_eom,option,106,0.44726,0.04084,0.02952,0.0066
+implied_var_eom,implied_var_eom,option,86,0.36287,0.15992,0.11981,0.13904
+skew_25_eom,skew_25_eom,option,83,0.35021,0.03366,0.02078,0.00435
+downside_skew_10_eom,downside_skew_10_eom,option,64,0.27004,0.08222,0.06223,0.06238
+skew_10_eom,skew_10_eom,option,58,0.24473,0.0678,0.03336,0.02033
+vrp_forward_month_avg,vrp_forward_month_avg,option,57,0.24051,0.05423,0.02537,0.05647
+atm_iv_month_avg,atm_iv_month_avg,option,50,0.21097,0.18513,0.12551,0.17205
+downside_skew_eom,downside_skew_eom,option,11,0.04641,0.09059,0.10277,0.10277

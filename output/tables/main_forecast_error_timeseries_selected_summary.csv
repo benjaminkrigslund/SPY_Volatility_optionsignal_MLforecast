@@ -1,0 +1,16 @@
+plot_order,plot_group,plot_label,model_mae,har_mae,mae_gain_vs_har,model_mse,har_mse,mse_gain_vs_har,final_cumulative_abs_error_gain_vs_har,final_cumulative_sq_error_gain_vs_har
+1,Individual models,Elastic Net | HAR+Option,0.029114,0.038798,0.009683,0.001648,0.013505,0.011857,1.500889,1.837822
+2,Individual models,Random Forest | HAR+Option,0.028671,0.038798,0.010126,0.002394,0.013505,0.011111,1.569582,1.72225
+3,Individual models,Random Forest | HAR+Macro+Option,0.030246,0.038798,0.008551,0.002649,0.013505,0.010856,1.325433,1.682715
+4,Individual models,Neural Network | HAR+Macro+Option,0.039645,0.038798,-0.000848,0.003495,0.013505,0.010011,-0.131401,1.55163
+5,Info-set equal weights,Equal Weight | HAR,0.037345,0.038798,0.001452,0.010932,0.013505,0.002573,0.225092,0.398842
+6,Info-set equal weights,Equal Weight | HAR+Option,0.031794,0.038798,0.007003,0.002336,0.013505,0.011169,1.085483,1.731194
+7,Info-set equal weights,Equal Weight | HAR+Macro,0.036263,0.038798,0.002534,0.006105,0.013505,0.0074,0.392794,1.146995
+8,Info-set equal weights,Equal Weight | HAR+Macro+Option,0.033017,0.038798,0.005781,0.003829,0.013505,0.009676,0.896012,1.499796
+9,Method equal weights,Elastic Net EW | Multiple,0.033913,0.038798,0.004884,0.006109,0.013505,0.007396,0.757042,1.146352
+10,Method equal weights,PCA EW | Multiple,0.038084,0.038798,0.000714,0.012641,0.013505,0.000864,0.110607,0.133909
+11,Method equal weights,Random Forest EW | Multiple,0.029322,0.038798,0.009476,0.002622,0.013505,0.010883,1.468723,1.686937
+12,Method equal weights,Neural Network EW | Multiple,0.036807,0.038798,0.001991,0.004197,0.013505,0.009308,0.308553,1.442802
+13,All-model forecast combinations,Equal Weight | All ML,0.032162,0.038798,0.006635,0.004748,0.013505,0.008757,1.028438,1.357408
+14,All-model forecast combinations,Stacked Random Forest,0.027748,0.038798,0.01105,0.002501,0.013505,0.011004,1.712688,1.705688
+15,All-model forecast combinations,Stacked Elastic Net,0.031803,0.038798,0.006994,0.003448,0.013505,0.010057,1.084091,1.558829

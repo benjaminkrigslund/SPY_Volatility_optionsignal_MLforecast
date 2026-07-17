@@ -1,0 +1,10 @@
+plot_order,plot_group,plot_label,final_cumulative_r2_oos_vs_har,min_cumulative_r2_oos_vs_har,max_cumulative_r2_oos_vs_har,final_rolling36_r2_oos_vs_har,min_rolling36_r2_oos_vs_har,max_rolling36_r2_oos_vs_har
+1,Individual models,Elastic Net | HAR+Option,0.87795,-10.08199,0.90867,0.21842,-0.67932,0.95905
+2,Individual models,Random Forest | HAR+Option,0.82274,-7.75125,0.85355,-0.17622,-0.22378,0.96087
+3,Individual models,Random Forest | HAR+Macro+Option,0.80385,-6.14624,0.83547,-0.22086,-0.37336,0.95843
+4,Individual models,Neural Network | HAR+Macro+Option,0.74123,-17.99827,0.82981,-0.95401,-4.18183,0.91603
+5,Equal-weight combinations,Equal Weight | HAR+Option,0.82701,-16.51992,0.86352,-0.20364,-0.59821,0.93574
+6,Equal-weight combinations,Random Forest EW | Multiple,0.80587,-9.71493,0.83422,-0.15837,-0.15837,0.96256
+7,Equal-weight combinations,Equal Weight | All ML,0.64845,-8.81754,0.66289,0.2195,-0.18289,0.74135
+8,Stacked combinations,Stacked Random Forest,0.81483,-0.40202,0.84559,-0.11062,-0.18735,0.96042
+9,Stacked combinations,Stacked Elastic Net,0.74467,-9.31555,0.76877,0.08773,-0.45858,0.86932

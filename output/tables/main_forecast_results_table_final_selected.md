@@ -1,0 +1,19 @@
+# Main Forecast Results Table: Final Selected Rows
+
+Selection rule:
+- Rows are selected from the existing main forecast table.
+- Best rows are chosen by the main table's 120-month OOS R2 rank, with QLIKE rank as the tie-breaker.
+- The table is sorted by 120-month OOS R2 rank.
+
+|selection                         | rank_r2_oos| rank_qlike|model                 | members|information_set  | n_oos| rmse_gain_vs_har| r2_oos_vs_har| qlike_gain_vs_har| r2_oos_60_vs_har| r2_oos_180_vs_har|
+|:---------------------------------|-----------:|----------:|:---------------------|-------:|:----------------|-----:|----------------:|-------------:|-----------------:|----------------:|-----------------:|
+|Best HAR + Option model           |           1|          1|Elastic Net           |       1|HAR+Option       |   155|          0.07561|       0.87795|           0.02351|          0.69166|           0.54316|
+|Best information-set equal weight |           2|          5|Equal Weight          |       4|HAR+Option       |   155|          0.06788|       0.82701|           0.01449|          0.85182|           0.46923|
+|Stacked Random Forest             |           4|         11|Stacked Random Forest |      16|Multiple         |   155|          0.06620|       0.81483|           0.00872|          0.94379|           0.40429|
+|Best method equal weight          |           5|          9|Random Forest EW      |       4|Multiple         |   155|          0.06501|       0.80587|           0.01025|          0.95101|           0.44483|
+|Best HAR + Macro + Option model   |           6|          8|Random Forest         |       1|HAR+Macro+Option |   155|          0.06474|       0.80385|           0.01049|          0.94583|           0.45218|
+|Best HAR-only ML model            |           7|         17|Random Forest         |       1|HAR              |   155|          0.06250|       0.78640|           0.00016|          0.88316|           0.32469|
+|Best HAR + Macro model            |           8|         26|Random Forest         |       1|HAR+Macro        |   155|          0.05850|       0.75336|          -0.01556|          0.88002|           0.26018|
+|Stacked Elastic Net               |           9|          7|Stacked Elastic Net   |      16|Multiple         |   155|          0.05749|       0.74467|           0.01279|          0.87199|           0.51322|
+|All-ML equal weight               |          14|          4|Equal Weight          |      16|Multiple         |   155|          0.04731|       0.64845|           0.01530|          0.82573|           0.44357|
+|HAR benchmark                     |          25|         18|OLS HAR               |       1|HAR              |   155|          0.00000|       0.00000|           0.00000|          0.00000|           0.00000|

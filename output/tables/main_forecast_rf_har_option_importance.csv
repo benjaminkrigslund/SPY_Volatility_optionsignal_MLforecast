@@ -1,0 +1,24 @@
+variable,variable_label,feature_group,refits_used,top5_refits,top5_rate,mean_importance,median_importance,latest_importance,mean_rank
+put_25_iv_eom,put_25_iv_eom,option,217,216,0.99539,1.91174,1.99253,1.9026,2.02765
+atm_iv_eom,atm_iv_eom,option,217,216,0.99539,1.80977,1.75651,2.73043,2.73733
+implied_var_eom,implied_var_eom,option,217,201,0.92627,1.84028,1.70247,2.65082,2.62673
+call_25_iv_eom,call_25_iv_eom,option,217,198,0.91244,1.72806,1.53216,2.36912,3.51613
+har_rv_1m,realized_vol,har,217,77,0.35484,1.25963,1.28504,1.65487,6.74194
+atm_dispersion_eom,atm_dispersion_eom,option,217,56,0.25806,1.04147,0.94474,0.54288,8.38249
+implied_var_month_avg,implied_var_month_avg,option,217,35,0.16129,1.00304,0.91084,1.47811,9.35945
+skew_10_eom,skew_10_eom,option,217,27,0.12442,0.8987,0.96093,0.51149,10.43318
+downside_skew_10_eom,downside_skew_10_eom,option,217,14,0.06452,0.60744,0.55739,0.30518,15.57143
+vrp_forward_eom,vrp_forward_eom,option,217,10,0.04608,0.77477,0.70924,1.37921,11.69124
+downside_skew_eom,downside_skew_eom,option,217,10,0.04608,0.79912,0.78729,0.37438,12.75115
+har_rv_12m,12-month mean of realized_vol,har,217,8,0.03687,0.41229,0.39626,0.57103,18.42396
+har_rv_3m,3-month mean of realized_vol,har,217,7,0.03226,0.79389,0.7452,0.67009,12
+skew_25_eom,skew_25_eom,option,217,4,0.01843,0.86376,0.88448,0.51746,10.23502
+put_25_dispersion_eom,put_25_dispersion_eom,option,217,3,0.01382,0.67272,0.66171,0.49478,13.97696
+atm_iv_month_avg,atm_iv_month_avg,option,217,2,0.00922,0.93881,0.86894,1.2666,10.19355
+mean_dispersion_month_avg,mean_dispersion_month_avg,option,217,1,0.00461,0.53339,0.51778,0.45062,15.52074
+mean_dispersion_eom,mean_dispersion_eom,option,217,0,0,0.56477,0.55058,0.49756,14.24424
+skew_25_month_avg,skew_25_month_avg,option,217,0,0,0.44737,0.43638,0.38371,17.76037
+smile_curvature_25_eom,smile_curvature_25_eom,option,217,0,0,0.41972,0.44039,0.60967,17.82488
+vrp_forward_month_avg,vrp_forward_month_avg,option,217,0,0,0.37212,0.35835,0.60341,19.07373
+smile_curvature_10_eom,smile_curvature_10_eom,option,217,0,0,0.35396,0.36676,0.60538,20.17051
+smile_curvature_25_month_avg,smile_curvature_25_month_avg,option,217,0,0,0.33826,0.35987,0.35185,20.73733

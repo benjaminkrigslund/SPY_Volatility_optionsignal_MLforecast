@@ -1,0 +1,28 @@
+forecast_id,model,information_set,forecast_type,n,qlike_gain_vs_har,dm_stat_model_minus_har,dm_p_two_sided,dm_p_one_sided_model_better,rank_qlike_gain,rank_dm_one_sided
+combo_equal_weight_all_har_augmented_ml_x_dataset_log_rolling,Equal Weight,Multiple,all_EW,155,0.087684376725756,-1.70920150991995,0.0874136292855831,0.0437068146427915,4,1
+enet__HAR_O__log__rolling,Elastic Net,HAR+Option,individual,155,0.128062716313659,-1.53564064373707,0.124626540130197,0.0623132700650985,1,2
+combo_equal_weight_har_om_across_ml_har_augmented_log_rolling,Equal Weight,HAR+Macro+Option,infoset_EW,155,0.0976372456093065,-1.43753847773765,0.150565047781621,0.0752825238908107,2,3
+combo_equal_weight_enet_across_har_augmented_datasets_log_rolling,Elastic Net EW,Multiple,method_EW,155,0.088967087736822,-1.41318752786281,0.157600592719132,0.0788002963595661,3,4
+combo_equal_weight_pca_across_har_augmented_datasets_log_rolling,PCA EW,Multiple,method_EW,155,0.0622806791196804,-1.34355865538882,0.179091146662483,0.0895455733312414,10,5
+rf__HAR_O__log__rolling,Random Forest,HAR+Option,individual,155,0.0658364167546575,-1.31444123069752,0.18869776307644,0.0943488815382202,7,6
+stacked_enet_on_har_augmented_forecasts_log_rolling,Stacked Elastic Net,Multiple,stacked,155,0.0626211387770154,-1.31240418693505,0.189383794934165,0.0946918974670825,9,7
+combo_equal_weight_rf_across_har_augmented_datasets_log_rolling,Random Forest EW,Multiple,method_EW,155,0.0306183714278053,-1.24371093589854,0.213605969667248,0.106802984833624,14,8
+rf__HAR_OM__log__rolling,Random Forest,HAR+Macro+Option,individual,155,0.0370791384055122,-1.20768762048483,0.227167441570416,0.113583720785208,12,9
+combo_equal_weight_har_o_across_ml_har_augmented_log_rolling,Equal Weight,HAR+Option,infoset_EW,155,0.0865314283638316,-1.13932758959075,0.254566545153704,0.127283272576852,5,10
+pca__HAR_O__log__rolling,PCA,HAR+Option,individual,155,0.0750675752318298,-1.10104411639764,0.27087745706243,0.135438728531215,6,11
+pca__HAR_OM__log__rolling,PCA,HAR+Macro+Option,individual,155,0.0636615443898764,-0.966461068606453,0.333813518725829,0.166906759362915,8,12
+combo_equal_weight_nn_across_har_augmented_datasets_log_rolling,Neural Network EW,Multiple,method_EW,155,0.0454487709805982,-0.666408772964869,0.505149856514329,0.252574928257165,11,13
+enet__HAR_OM__log__rolling,Elastic Net,HAR+Macro+Option,individual,155,0.0369539690929913,-0.477354242027734,0.633109891980046,0.316554945990023,13,14
+stacked_rf_on_har_augmented_forecasts_log_rolling,Stacked Random Forest,Multiple,stacked,155,0.0155074651863233,-0.3129943905545,0.754284923887168,0.377142461943584,15,15
+combo_equal_weight_har_across_ml_har_augmented_log_rolling,Equal Weight,HAR,infoset_EW,155,0.00290856204340506,-0.173556206999314,0.862214251338351,0.431107125669175,16,16
+nn__HAR_OM__log__rolling,Neural Network,HAR+Macro+Option,individual,155,-0.0187499475901826,0.21038715192821,0.833365519534919,0.583317240232541,20,17
+enet__HAR_M__log__rolling,Elastic Net,HAR+Macro,individual,155,-0.00266470045586198,0.393479074995961,0.693965675957604,0.653017162021198,18,18
+nn__HAR__log__rolling,Neural Network,HAR,individual,155,-0.0438781027967987,0.825219694539536,0.409246874134631,0.795376562932685,24,19
+combo_equal_weight_har_m_across_ml_har_augmented_log_rolling,Equal Weight,HAR+Macro,infoset_EW,155,-0.0266733313570758,0.881986930816635,0.377783874788345,0.811108062605828,22,20
+rf__HAR__log__rolling,Random Forest,HAR,individual,155,-0.0333702291899282,1.20308402543486,0.228943806473826,0.885528096763087,23,21
+pca__HAR_M__log__rolling,PCA,HAR+Macro,individual,155,-0.0216830420665186,1.30978157928866,0.190269736473732,0.904865131763134,21,22
+rf__HAR_M__log__rolling,Random Forest,HAR+Macro,individual,155,-0.129304367337175,1.35954262289768,0.173974705706246,0.913012647146877,25,23
+nn__HAR_O__log__rolling,Neural Network,HAR+Option,individual,155,-1.96678642547406,1.69740139838433,0.0896207983752826,0.955189600812359,27,24
+enet__HAR__log__rolling,Elastic Net,HAR,individual,155,-0.0141432580752053,2.12799091100897,0.0333378371678071,0.983331081416097,19,25
+nn__HAR_M__log__rolling,Neural Network,HAR+Macro,individual,155,-0.267226046881659,3.23128644536573,0.00123234372881158,0.999383828135594,26,26
+pca__HAR__log__rolling,PCA,HAR,individual,155,0,,,,17,

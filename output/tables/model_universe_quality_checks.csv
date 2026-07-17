@@ -1,0 +1,6 @@
+check_name,passed,detail
+Predictors dated at t,TRUE,All forecast rows have origin_date strictly earlier than target_date.
+Target aligned to t+1,TRUE,"Within each specification, target_date is the next observed monthly date after origin_date."
+No future leakage in frame construction,TRUE,Model frame rows = 362; raw monthly rows minus terminal month = 362.
+Common OOS sample available,TRUE,191 common forecast dates across all 33 specifications.
+Missing forecasts flagged,TRUE,880 missing forecast cells retained as NA in the tidy output grid.
