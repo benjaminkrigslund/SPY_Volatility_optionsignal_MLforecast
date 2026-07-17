@@ -1,0 +1,65 @@
+forecast_id,rank_m,v_m,mcs_pvalue_tmax,rank_r,v_r,mcs_pvalue_tr,average_loss,retained_in_mcs,loss_name,combo_name
+pca__HAR_O__log__rolling,1,-2.05539884261285,1,8,1.13391487384609,0.976,0.00303491835336204,TRUE,mse,PCA: HAR + Option
+enet__HAR_OM__log__rolling,2,-1.78216004237765,1,3,0.996834918771384,0.986,0.0026211842220034,TRUE,mse,Elastic Net: HAR + Option + Macro
+combo_equal_weight_all_har_augmented_ml_x_dataset_log_rolling,3,-1.74397422724046,1,6,1.07265933080527,0.978,0.00270463595312456,TRUE,mse,EW all ML x HAR-augmented datasets
+stacked_rf_on_har_augmented_forecasts_log_rolling,4,-1.6194575552394,1,5,1.00501717681534,0.986,0.00249105218567406,TRUE,mse,Stacked RF on HAR-augmented forecasts
+combo_equal_weight_har_across_ml_har_augmented_log_rolling,5,-1.5802681052808,1,17,1.381869742766,0.936,0.00339127454897654,TRUE,mse,EW across ML: HAR
+combo_equal_weight_pls_across_har_augmented_datasets_log_rolling,6,-1.55238308721028,1,13,1.25252814728136,0.966,0.00272240057673185,TRUE,mse,EW PLS across HAR-augmented datasets
+pca__HAR__log__rolling,7,-1.55142391557504,1,19,1.48153403702432,0.888,0.00325727088356759,TRUE,mse,PCA: HAR
+rf__HAR_O__log__rolling,8,-1.52731932160341,1,11,1.14773800019828,0.976,0.00251427332269342,TRUE,mse,Random Forest: HAR + Option
+combo_equal_weight_rf_across_har_augmented_datasets_log_rolling,9,-1.50938713427633,1,20,1.49699079285589,0.876,0.00278239450464047,TRUE,mse,EW Random Forest across HAR-augmented datasets
+pls__HAR_O__log__rolling,10,-1.49695131850103,1,1,-0.991920488107341,1,0.00194192334988647,TRUE,mse,PLS: HAR + Option
+combo_equal_weight_har_om_across_ml_har_augmented_log_rolling,11,-1.49520745357649,1,12,1.24105807660117,0.968,0.00251556510252443,TRUE,mse,EW across ML: HAR + Option + Macro
+stacked_enet_on_har_augmented_forecasts_log_rolling,12,-1.49409708920615,1,7,1.08762006512672,0.978,0.00219740301555933,TRUE,mse,Stacked ENET on HAR-augmented forecasts
+rf__HAR_OM__log__rolling,13,-1.4912400710503,1,21,1.54329821180257,0.846,0.00276846447347281,TRUE,mse,Random Forest: HAR + Option + Macro
+combo_equal_weight_pca_across_har_augmented_datasets_log_rolling,14,-1.4534299121107,1,24,2.10734182214741,0.492,0.00291700313307694,TRUE,mse,EW PCA across HAR-augmented datasets
+combo_equal_weight_har_o_across_ml_har_augmented_log_rolling,15,-1.41003968687134,1,15,1.32028058438485,0.956,0.00300962223934082,TRUE,mse,EW across ML: HAR + Option
+pca__HAR_OM__log__rolling,16,-1.30929612445489,1,23,1.93824824400459,0.6,0.00343000362882425,TRUE,mse,PCA: HAR + Option + Macro
+nn__HAR__log__rolling,17,-1.2544485026815,1,26,2.27641523625834,0.39,0.00318527348727306,TRUE,mse,Neural Network: HAR
+rf__HAR__log__rolling,18,-1.23195240056642,1,30,2.68142112426146,0.228,0.00300776490819892,TRUE,mse,Random Forest: HAR
+combo_equal_weight_har_m_across_ml_har_augmented_log_rolling,19,-1.08253602964087,1,27,2.43711863535551,0.328,0.00335489951300532,TRUE,mse,EW across ML: HAR + Macro
+pls__HAR_OM__log__rolling,20,-0.813601613416943,1,31,2.81732780185088,0.19,0.00344796053468522,TRUE,mse,PLS: HAR + Option + Macro
+rf__HAR_M__log__rolling,21,-0.756746083295389,1,28,2.65710904842321,0.23,0.00361410694703012,TRUE,mse,Random Forest: HAR + Macro
+enet__HAR_O__log__rolling,22,-0.440177635446107,1,2,0.991920488107341,0.986,0.00373636421008079,TRUE,mse,Elastic Net: HAR + Option
+nn__HAR_OM__log__rolling,23,-0.419489361860802,1,25,2.22145001789767,0.422,0.00354166121732609,TRUE,mse,Neural Network: HAR + Option + Macro
+pls__HAR_M__log__rolling,24,-0.361433489638364,1,32,2.83124503300164,0.188,0.00378681903249067,TRUE,mse,PLS: HAR + Macro
+combo_equal_weight_nn_across_har_augmented_datasets_log_rolling,25,-0.291238012295611,1,22,1.75050471511165,0.712,0.00389650931460656,TRUE,mse,EW Neural Network across HAR-augmented datasets
+combo_equal_weight_enet_across_har_augmented_datasets_log_rolling,26,0.188387631129229,1,4,1.00167517220649,0.986,0.00419633280747135,TRUE,mse,EW Elastic Net across HAR-augmented datasets
+pls__HAR__log__rolling,27,0.69735564679785,0.816,16,1.32496433279672,0.954,0.00517051057079591,TRUE,mse,PLS: HAR
+pca__HAR_M__log__rolling,28,0.782848219914387,0.794,33,3.6648131724707,0.038,0.00438982341519157,TRUE,mse,PCA: HAR + Macro
+enet__HAR_M__log__rolling,29,0.806971065320277,0.79,9,1.14193093015321,0.976,0.00611038467669814,TRUE,mse,Elastic Net: HAR + Macro
+har_ols__HAR__log__rolling,30,0.809843747670627,0.79,10,1.14503331224872,0.976,0.00612258575173937,TRUE,mse,OLS: HAR
+enet__HAR__log__rolling,31,0.847031979594939,0.776,14,1.26525120313625,0.966,0.00599104303395098,TRUE,mse,Elastic Net: HAR
+nn__HAR_M__log__rolling,32,0.965543759333886,0.724,29,2.6611733734439,0.23,0.00515842787651625,TRUE,mse,Neural Network: HAR + Macro
+nn__HAR_O__log__rolling,33,1.40670253074728,0.406,18,1.46627577975271,0.896,0.019367057466906,TRUE,mse,Neural Network: HAR + Option
+combo_equal_weight_all_har_augmented_ml_x_dataset_log_rolling,1,-2.09221085199258,1,7,0.994671364465574,0.994,0.277812321922258,TRUE,qlike,EW all ML x HAR-augmented datasets
+combo_equal_weight_enet_across_har_augmented_datasets_log_rolling,2,-1.97735625095578,1,4,0.924396247542269,0.996,0.26363104377047,TRUE,qlike,EW Elastic Net across HAR-augmented datasets
+combo_equal_weight_har_o_across_ml_har_augmented_log_rolling,3,-1.79674882835741,1,2,0.506541337084077,1,0.248170755805553,TRUE,qlike,EW across ML: HAR + Option
+pls__HAR_O__log__rolling,4,-1.78576338652339,1,3,0.717019300083874,0.998,0.247519270495854,TRUE,qlike,PLS: HAR + Option
+combo_equal_weight_har_om_across_ml_har_augmented_log_rolling,5,-1.75038468075496,1,6,0.962049470840803,0.996,0.261550035497359,TRUE,qlike,EW across ML: HAR + Option + Macro
+combo_equal_weight_rf_across_har_augmented_datasets_log_rolling,6,-1.68430345358365,1,20,1.85443180799118,0.752,0.328968950796528,TRUE,qlike,EW Random Forest across HAR-augmented datasets
+enet__HAR_O__log__rolling,7,-1.6626329441698,1,1,-0.506541337084077,1,0.234921421211102,TRUE,qlike,Elastic Net: HAR + Option
+enet__HAR_OM__log__rolling,8,-1.65777414863274,1,30,2.54720445134385,0.244,0.287586084914808,TRUE,qlike,Elastic Net: HAR + Option + Macro
+rf__HAR_OM__log__rolling,9,-1.63714018776832,1,17,1.66795584567677,0.858,0.315994428443493,TRUE,qlike,Random Forest: HAR + Option + Macro
+pca__HAR_O__log__rolling,10,-1.57419116349665,1,5,0.929848404918021,0.996,0.251251553158466,TRUE,qlike,PCA: HAR + Option
+enet__HAR_M__log__rolling,11,-1.52066590874651,1,12,1.55317089131953,0.912,0.362957746780226,TRUE,qlike,Elastic Net: HAR + Macro
+har_ols__HAR__log__rolling,12,-1.45559898101439,1,11,1.53672576930146,0.922,0.362467826603809,TRUE,qlike,OLS: HAR
+rf__HAR_O__log__rolling,13,-1.43452772178188,1,18,1.67583445525179,0.852,0.286128020764478,TRUE,qlike,Random Forest: HAR + Option
+combo_equal_weight_pls_across_har_augmented_datasets_log_rolling,14,-1.31500260982937,1,26,2.1308497519121,0.566,0.281119415408042,TRUE,qlike,EW PLS across HAR-augmented datasets
+stacked_enet_on_har_augmented_forecasts_log_rolling,15,-1.31194406027872,1,16,1.66577877642527,0.858,0.273423816167518,TRUE,qlike,Stacked ENET on HAR-augmented forecasts
+combo_equal_weight_pca_across_har_augmented_datasets_log_rolling,16,-1.28537318163049,1,27,2.18394157539364,0.514,0.310562110116903,TRUE,qlike,EW PCA across HAR-augmented datasets
+stacked_rf_on_har_augmented_forecasts_log_rolling,17,-0.993315830097673,1,15,1.63064590101006,0.87,0.319606308775125,TRUE,qlike,Stacked RF on HAR-augmented forecasts
+pca__HAR_OM__log__rolling,18,-0.62830021312343,1,14,1.6247099794809,0.874,0.325709520021615,TRUE,qlike,PCA: HAR + Option + Macro
+pls__HAR__log__rolling,19,-0.433405774604615,1,13,1.55524782068593,0.912,0.377803191651553,TRUE,qlike,PLS: HAR
+enet__HAR__log__rolling,20,-0.161642290910034,1,22,1.89792921629759,0.736,0.383627282348892,TRUE,qlike,Elastic Net: HAR
+combo_equal_weight_har_across_ml_har_augmented_log_rolling,21,-0.00333278795520906,1,19,1.77197138371778,0.8,0.386834699308074,TRUE,qlike,EW across ML: HAR
+combo_equal_weight_nn_across_har_augmented_datasets_log_rolling,22,0.020350755320842,1,8,1.32655036391807,0.966,0.387631129394178,TRUE,qlike,EW Neural Network across HAR-augmented datasets
+pls__HAR_OM__log__rolling,23,0.0369137944123919,1,29,2.49909366955782,0.274,0.390766625461739,TRUE,qlike,PLS: HAR + Option + Macro
+rf__HAR__log__rolling,24,0.380611440566544,0.982,31,3.74945359313354,0.008,0.3990831557733,TRUE,qlike,Random Forest: HAR
+pca__HAR__log__rolling,25,0.699248753476278,0.856,9,1.39610535624173,0.954,0.430849578529815,TRUE,qlike,PCA: HAR
+nn__HAR_OM__log__rolling,26,1.20425055969998,0.616,21,1.87010576447108,0.742,0.454314184664074,TRUE,qlike,Neural Network: HAR + Option + Macro
+combo_equal_weight_har_m_across_ml_har_augmented_log_rolling,27,1.32527432085577,0.546,24,1.98042824027398,0.672,0.454026166488492,TRUE,qlike,EW across ML: HAR + Macro
+nn__HAR_O__log__rolling,28,1.35131821037659,0.518,10,1.41555356555233,0.95,1.33132946317069,TRUE,qlike,Neural Network: HAR + Option
+rf__HAR_M__log__rolling,29,1.36661059104128,0.51,23,1.9799605043796,0.672,0.520106981804315,TRUE,qlike,Random Forest: HAR + Macro
+nn__HAR__log__rolling,30,1.5661113716053,0.354,28,2.18924392274759,0.508,0.473361662212115,TRUE,qlike,Neural Network: HAR
+pca__HAR_M__log__rolling,31,1.77249592093241,0.226,25,2.04129814600937,0.632,0.765020586444411,TRUE,qlike,PCA: HAR + Macro
